@@ -1,0 +1,25 @@
+<Component
+    xmlns="http://schema.reactant.tech/ui"
+    xmlns:layout="http://schema.reactant.tech/layout"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://schema.reactant.tech/ui http://schema.reactant.tech/ui.xsd
+                        http://schema.reactant.tech/layout http://schema.reactant.tech/layout.xsd"
+    type="CityCell">
+
+    <styles name="ReactantStyles">
+        <LabelStyle name="name" textColor="black" font=":semibold@12"/>
+        <LabelStyle name="location" textColor="#444444" font=":regular@12" numberOfLines="0"/>
+    </styles>
+
+    <Label
+        field="name"
+        style="name"
+        layout:fillHorizontally="super inset(20)"/>
+
+    <Label
+        field="location"
+        style="location"
+        layout:below="name offset(4)"
+        layout:fillHorizontally="name"
+        layout:bottom="super inset(6)"/>
+</Component>

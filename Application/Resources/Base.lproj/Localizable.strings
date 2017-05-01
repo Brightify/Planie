@@ -1,0 +1,100 @@
+/*
+  Localizable.strings
+  TravelPlanner
+
+  Created by Tadeáš Kříž on 06/09/16.
+  Copyright © 2017 Brightify. All rights reserved.
+*/
+
+"App.Initializing" = "Application is initializing";
+
+"Common.TryAgainLater" = "Please try again later.";
+"Common.Loading" = "Loading ..";
+"Common.Cancel" = "Cancel";
+"Common.Done" = "Done";
+
+"Role.User" = "User";
+"Role.Moderator" = "Moderator";
+"Role.Admin" = "Administrator";
+
+"Auth.Login" = "Log in";
+"Auth.SignUp" = "Sign up";
+"Auth.Email" = "Email";
+"Auth.Password" = "Password";
+"Auth.Logout" = "Log out";
+"Auth.ConfirmLogout" = "Do you want to log out?";
+
+"Auth.Error.EmptyEmail" = "Email can't be empty.";
+"Auth.Error.InvalidEmail" = "Email is not valid.";
+"Auth.Error.EmptyPassword" = "Password can't be empty.";
+"Auth.Error.ShortPassword" = "Password has to be at least %d characters long.";
+"Auth.Error.WrongPassword" = "You've entered a wrong email or password.";
+"Auth.Error.UserDisabled" = "Your account has been disabled. Please contact us if you think this is a mistake.";
+"Auth.Error.Unknown" = "An internal error occured. Please try again later.";
+"Auth.Error.EmailAlreadyInUse" = "Email already registered.";
+"Auth.Error.SignupTitle" = "Can't register";
+"Auth.Error.LoginTitle" = "Can't log in";
+
+"Trip.Destination" = "Destination";
+"Trip.Begin" = "Begin";
+"Trip.End" = "End";
+"Trip.Comment" = "Comment";
+
+"Trip.Create.Title" = "Create trip";
+"Trip.Create.Error.Title" = "Could not create trip";
+"Trip.Edit.Title" = "Edit trip";
+"Trip.Edit.Error.Title" = "Could not save trip";
+"Trip.Create.SelectDestination" = "Select destination";
+"Trip.Create.Today" = "Today";
+"Trip.Create.OneDayTrip" = "One day trip";
+"Trip.Create.Error.DestinationMissing" = "Destination is not set.";
+"Trip.Create.Error.BeginMissing" = "Trip begin is not set.";
+"Trip.Create.Error.EndMissing" = "Trip end is not set.";
+"Trip.Create.Error.EndBeforeBegin" = "Trip cannot end sooner than it begins.";
+
+"Trip.List.Title" = "Trips";
+"Trip.List.TabTitle" = "My trips";
+"Trip.List.Empty" = "No trips yet.";
+"Trip.List.Countdown" = "begins %@";
+"Trip.List.Create" = "Create trip";
+"Trip.List.Print" = "Print itinerary";
+
+"Trip.List.Filter.Scope.All" = "All";
+"Trip.List.Filter.Scope.Past" = "Past";
+"Trip.List.Filter.Scope.Present" = "Present";
+"Trip.List.Filter.Scope.Future" = "Future";
+
+"Trip.Print.Title" = "Trip itinerary";
+"Trip.Print.SelectInterval" = "Which trips to print";
+"Trip.Print.Next30Days" = "Next 30 days";
+"Trip.Print.NextMonth" = "Next month";
+"Trip.Print.RestOfThisYear" = "Rest of this year";
+"Trip.Print.AllFutureTrips" = "All future trips";
+"Trip.Print.Everything" = "Everything";
+
+"Trip.Detail.Date" = "Date";
+"Trip.Detail.Delete" = "Delete trip";
+"Trip.Detail.Edit" = "Edit trip";
+"Trip.Detail.ConfirmDelete.Title" = "Delete trip?";
+"Trip.Detail.ConfirmDelete.Message" = "Once you delete a trip it cannot be restored.";
+
+"City.Search.Placeholder" = "Search cities ...";
+"City.Search.NotFound" = "No cities found.";
+"City.Search.MinimumCharacters" = "Enter at least %d characters to search.";
+
+"User.List.Title" = "Users";
+"User.List.TabTitle" = "Manage users";
+"User.List.Disabled" = "disabled";
+"User.List.Empty" = "No other users.";
+
+"User.Detail.Title" = "User detail";
+"User.Detail.EmailLabel" = "Email";
+"User.Detail.RoleLabel" = "Role";
+"User.Detail.DisabledLabel" = "Disabled";
+"User.Detail.Disabled.True" = "yes";
+"User.Detail.Disabled.False" = "no";
+"User.Detail.DisableAccount" = "Disable account";
+"User.Detail.EnableAccount" = "Enable account";
+"User.Detail.ChangeRole" = "Change role";
+"User.Detail.ManageTrips" = "Manage trips";
+"User.Detail.SelectRole" = "Select role";

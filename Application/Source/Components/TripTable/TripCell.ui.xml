@@ -1,0 +1,42 @@
+<Component
+    xmlns="http://schema.reactant.tech/ui"
+    xmlns:layout="http://schema.reactant.tech/layout"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://schema.reactant.tech/ui http://schema.reactant.tech/ui.xsd
+                        http://schema.reactant.tech/layout http://schema.reactant.tech/layout.xsd"
+    type="TripCell">
+
+    <styles name="ReactantStyles">
+        <LabelStyle name="destination" textColor="white" font=":light@14"/>
+        <LabelStyle name="date" textColor="white" font=":regular@12" numberOfLines="0"/>
+        <ViewStyle  name="map" clipsToBounds="true"/>
+    </styles>
+
+    <Container
+        field="container"
+        layout:top="super inset(8)"
+        layout:fillHorizontally="super inset(8)"
+        layout:bottom="super"
+        cornerRadius="4"
+        clipsToBounds="true">
+
+        <Container
+            field="map"
+            layout:top="super"
+            layout:fillHorizontally="super"
+            layout:height="80"
+            style="map"
+            isUserInteractionEnabled="false" />
+
+        <Label
+            field="destination"
+            style="destination"
+            layout:below="map offset(12)"
+            layout:fillHorizontally="super inset(12)"/>
+        <Label
+            field="date"
+            style="date"
+            layout:below="destination offset(4)"
+            layout:fillHorizontally="super inset(12)"/>
+    </Container>
+</Component>

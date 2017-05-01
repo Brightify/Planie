@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Component
+    xmlns="http://schema.reactant.tech/ui"
+    xmlns:layout="http://schema.reactant.tech/layout"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://schema.reactant.tech/ui http://schema.reactant.tech/ui.xsd
+                        http://schema.reactant.tech/layout http://schema.reactant.tech/layout.xsd"
+    type="UserDetailRootView"
+    rootView="true">
+
+    <styles>
+        <!-- in Styles the bg color was Colors.Accent -->
+        <ButtonStyle name="button" font=":light@14" backgroundColor="#103375"/>
+    </styles>
+
+    <Container
+        layout:id="container"
+        backgroundColor="white"
+        layout:fillHorizontally="super"
+        layout:top="super">
+        <Label
+            field="email"
+            layout:fillHorizontally="super inset(20)"
+            layout:top="super inset(20)"/>
+
+        <Label
+            field="role"
+            layout:fillHorizontally="super inset(20)"
+            layout:below="email offset(12)"/>
+
+        <Label
+            field="disabled"
+            layout:fillHorizontally="super inset(20)"
+            layout:below="role offset(12)"
+            layout:bottom="super inset(20)"/>
+    </Container>
+
+    <Button
+        field="disableAccountButton"
+        style="button"
+        layout:fillHorizontally="super inset(12)"
+        layout:below="id:container offset(12)"
+        layout:height="32"/>
+
+    <Button
+        field="changeRoleButton"
+        style="button"
+        layout:fillHorizontally="super inset(12)"
+        layout:below="disableAccountButton offset(12)"/>
+
+    <Button
+        field="manageTripsButton"
+        style="button"
+        layout:fillHorizontally="super inset(12)"
+        layout:below="changeRoleButton offset(12)"/>
+</Component>

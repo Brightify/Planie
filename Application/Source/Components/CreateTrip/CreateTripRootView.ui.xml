@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Component
+    xmlns="http://schema.reactant.tech/ui"
+    xmlns:layout="http://schema.reactant.tech/layout"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://schema.reactant.tech/ui http://schema.reactant.tech/ui.xsd
+                        http://schema.reactant.tech/layout http://schema.reactant.tech/layout.xsd"
+    type="CreateTripRootView"
+    extend="all"
+    rootView="true">
+
+    <styles name="ReactantStyles">
+        <LabelStyle name="commentTitle" font=":light@12"/>
+    </styles>
+
+    <TextField
+        field="destination"
+        layout:top="super inset(30)"
+        layout:fillHorizontally="super inset(20)" />
+
+    <View
+        field="destinationButtonOverlay"
+        layout:edges="destination" />
+
+    <TextField
+        field="begin"
+        layout:leading="destination"
+        layout:below="destination offset(30)" />
+
+    <TextField
+        field="end"
+        layout:leading="begin.trailing offset(8)"
+        layout:trailing="destination"
+        layout:top="begin"
+        layout:width="begin" />
+
+    <TextView
+        field="comment"
+        layout:fillHorizontally="destination"
+        layout:below="begin offset(35)"
+        layout:bottom="super offset(-30)"
+        layout:height=">= 60" />
+</Component>

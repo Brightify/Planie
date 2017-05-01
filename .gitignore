@@ -1,0 +1,6 @@
+TravelPlanner.xcworkspace
+Pods
+TravelPlanner.xcodeproj/xcuserdata
+*.generated.swift
+.DS_Store
+GeneratedUI.swift

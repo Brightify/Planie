@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Component xmlns="http://schema.reactant.tech/ui"
+    xmlns:layout="http://schema.reactant.tech/layout"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://schema.reactant.tech/ui http://schema.reactant.tech/ui.xsd
+                        http://schema.reactant.tech/layout http://schema.reactant.tech/layout.xsd"
+    type="RegistrationRootView"
+    extend="all"
+    rootView="true">
+
+    <styles name="ReactantStyles"></styles>
+
+    <ImageView
+    image="blurred-splash"
+    style=":general:splash"
+    layout:edges="super"/>
+
+    <ImageView
+    image="planieLogo"
+    style=":general:logo"
+    contentMode="scaleAspectFill"
+    layout:centerX="super"
+    layout:centerY="super multiplied(by:0.5)"/>
+
+    <Container
+        field="centeringContainer"
+        layout:fillHorizontally="super inset(20)"
+        layout:centerY="super">
+
+        <Container
+            layout:top="centeringContainer"
+            layout:fillHorizontally="super inset(16)"
+            layout:height="44"
+            field="emailBackground">
+            <TextField
+            field="email"
+            layout:edges="super inset(8)"/>
+        </Container>
+        <Container
+            layout:below="emailBackground offset(8)"
+            layout:fillHorizontally="super inset(16)"
+            layout:height="44"
+            field="passwordBackground">
+            <TextField
+            field="password"
+            layout:edges="super inset(8)"/>
+        </Container>
+
+        <Button
+            field="signUp"
+            layout:centerX="super"
+            layout:below="passwordBackground offset(8)"
+            layout:width="== centeringContainer divided(by:2)"
+            layout:height="44"
+            layout:bottom="super"/>
+    </Container>
+</Component>

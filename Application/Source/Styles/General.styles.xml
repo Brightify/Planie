@@ -1,0 +1,5 @@
+<styleGroup name="general">
+    <ViewStyle name="controllerRootView" backgroundColor="#dddddd"/>
+    <ImageViewStyle name="logo" contentMode="scaleAspectFill"/>
+    <ImageViewStyle name="splash" contentMode="scaleAspectFill"/>
+</styleGroup>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Component
+    xmlns="http://schema.reactant.tech/ui"
+    xmlns:layout="http://schema.reactant.tech/layout"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://schema.reactant.tech/ui http://schema.reactant.tech/ui.xsd
+                        http://schema.reactant.tech/layout http://schema.reactant.tech/layout.xsd"
+    type="InitialRootView"
+    extend="all"
+    rootView="true">
+
+    <ImageView
+        image="splash"
+        style=":general:splash"
+        layout:edges="super" />
+
+    <ImageView
+        image="planieLogo"
+        style=":general:logo"
+        layout:centerX="super"
+        layout:centerY="super multiplied(by:0.5)" />
+
+    <ActivityIndicator
+        field="indicator"
+        indicatorStyle="white"
+        layout:center="super" />
+
+</Component>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Component xmlns="http://schema.reactant.tech/ui"
+    xmlns:layout="http://schema.reactant.tech/layout"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://schema.reactant.tech/ui http://schema.reactant.tech/ui.xsd
+                        http://schema.reactant.tech/layout http://schema.reactant.tech/layout.xsd"
+    type="LoginRootView"
+    extend="all"
+    rootView="true">
+
+    <styles name="ReactantStyles"></styles>
+
+    <ImageView
+      image="splash"
+      style=":general:splash"
+      layout:edges="super"/>
+
+    <ImageView
+      field="blurredBackgroundImage"
+      image="blurred-splash"
+      style=":general:splash"
+      layout:edges="super"/>
+
+    <ImageView
+      image="planieLogo"
+      style=":general:logo"
+      layout:centerX="super"
+      layout:centerY="super multiplied(by:0.5)"/>
+
+    <Container
+        field="centeringContainer"
+        layout:fillHorizontally="super inset(20)"
+        layout:centerY="super">
+
+        <Container
+          layout:top="centeringContainer"
+          layout:fillHorizontally="super inset(16)"
+          layout:height="44"
+          field="emailBackground">
+          <TextField
+            field="email"
+            layout:edges="super inset(8)"/>
+        </Container>
+        <Container
+          layout:below="emailBackground offset(8)"
+          layout:fillHorizontally="super inset(16)"
+          layout:height="44"
+          field="passwordBackground">
+          <TextField
+            field="password"
+            layout:edges="super inset(8)"/>
+        </Container>
+        <Button
+          field="logIn"
+          layout:leading="emailBackground"
+          layout:below="passwordBackground offset(8)"
+          layout:bottom="super"
+          layout:height="44" />
+
+        <Button
+          field="signUp"
+          layout:leading="logIn.trailing offset(8)"
+          layout:trailing="emailBackground"
+          layout:top="logIn"
+          layout:bottom="logIn"
+          layout:width="logIn"/>
+    </Container>
+</Component>
