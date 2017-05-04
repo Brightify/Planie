@@ -9,7 +9,6 @@
 import UIKit
 import Reactant
 import RxSwift
-import Lipstick
 
 final class MainWireframe: Wireframe {
     

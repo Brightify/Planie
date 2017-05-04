@@ -7,7 +7,7 @@
 //
 
 import Reactant
-import Lipstick
+
 
 final class CityCell: ViewBase<City, Void> {
     

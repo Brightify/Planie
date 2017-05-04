@@ -7,7 +7,7 @@
 //
 
 import MapKit
-import Lipstick
+
 import Reactant
 
 final class TripDetailRootView: ViewBase<Trip, Void> {

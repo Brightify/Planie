@@ -10,7 +10,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 import JGProgressHUD
-import Lipstick
+
 import SCLAlertView
 import Reactant
 
@@ -60,8 +60,8 @@ let errorIndicator = AnyObserver<String> { event in
     }
 }
 
-let loadingIndicator: ActivityIndicator = {
-    let activityIndicator = ActivityIndicator()
+let loadingIndicator: ActivityIndicator<String> = {
+    let activityIndicator = ActivityIndicator<String>()
     let hud: JGProgressHUD = JGProgressHUD(style: .extraLight)
     hud.backgroundColor = UIColor.black.fadedOut(by: 30%)
     activityIndicator.asDriver().drive(onNext: { loading, message in

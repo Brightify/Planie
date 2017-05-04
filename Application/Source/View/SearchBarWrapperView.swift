@@ -7,7 +7,7 @@
 //
 
 import RxSwift
-import Lipstick
+
 
 /**
  This view is needed because of a bug in UIKit's UISearchBar. When using with scopes, its behavior was wrong:

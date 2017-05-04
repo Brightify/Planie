@@ -14,7 +14,6 @@ import Firebase
 import DataMapper
 import Fabric
 import Crashlytics
-import ReactantLiveUI
 
 @UIApplicationMain
 class AppDelegate: SuperDelegate, ApplicationLaunched {
@@ -29,7 +28,7 @@ class AppDelegate: SuperDelegate, ApplicationLaunched {
 
 //        Configuration.global.set(value: L10n.Common.loading, for: Properties.)
 //        ReactantConfiguration.global.defaultLoadingMessage = L10n.Common.loading
-        Configuration.global.set(value: GeneralStyles.controllerRootView, for: Properties.Style.controllerRoot)
+        Configuration.global.set(Properties.Style.controllerRoot, to: GeneralStyles.controllerRootView)
     }
 
     public func loadInterface(launchItem: LaunchItem) {
@@ -38,7 +37,8 @@ class AppDelegate: SuperDelegate, ApplicationLaunched {
         let module = PlanieModule()
         let wireframe = MainWireframe(module: module)
         window.rootViewController = wireframe.entrypoint()
-        ReactantLiveUIManager.shared.activate(in: window, configuration: GeneratedReactantLiveUIConfiguration())
+
+        activateLiveReload(in: window)
     }
 
     /// A way to speed up UI tests by disabling animations

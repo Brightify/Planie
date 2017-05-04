@@ -11,10 +11,9 @@ def shared_pods
     pod 'Fetcher', :git => 'https://github.com/Brightify/Fetcher.git', :branch => 'develop'
     pod 'Fetcher/RxFetcher', :git => 'https://github.com/Brightify/Fetcher.git', :branch => 'develop'
     pod 'DataMapper', '~> 0.1'
-    pod 'Lipstick', '~> 0.5'
-    pod 'Reactant', :git => 'https://github.com/Brightify/Reactant.git', :branch => 'master', :subspecs => ['Core', 'Result', 'TableView', 'CollectionView', 'Validation', 'StaticMap', 'ActivityIndicator', 'Configuration']
-    pod 'ReactantUI', :git => 'https://github.com/Brightify/ReactantUI.git', :branch => 'master'
-    pod 'ReactantLiveUI', :git => 'https://github.com/Brightify/ReactantUI.git', :branch => 'master', :configuration => 'Debug'
+    pod 'Reactant', '~> 1.0', :subspecs => ['Core', 'Result', 'TableView', 'CollectionView', 'Validation', 'StaticMap', 'ActivityIndicator', 'Configuration']
+    pod 'ReactantUI', '~> 0.1'
+    pod 'ReactantLiveUI', '~> 0.1', :configuration => 'Debug'
     pod 'IQKeyboardManagerSwift', '~> 4.0.5'
     pod 'JGProgressHUD', '~> 1.3.1'
     pod 'SwiftKeychainWrapper', '3.0.1'

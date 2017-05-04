@@ -10,7 +10,7 @@ import Reactant
 import DataMapper
 import RxSwift
 import RxCocoa
-import Lipstick
+
 
 final class UserDetailController: ControllerBase<UserProfile, UserDetailRootView> {
 

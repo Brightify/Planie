@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Lipstick
+import Reactant
 
 class AdministrationTabBarController: UITabBarController {
 

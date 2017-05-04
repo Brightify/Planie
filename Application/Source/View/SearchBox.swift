@@ -7,7 +7,7 @@
 //
 
 import Reactant
-import Lipstick
+
 
 final class SearchBox: ViewBase<String, Void> {
     

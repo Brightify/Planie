@@ -9,7 +9,7 @@
 import Reactant
 import RxSwift
 import Material
-import Lipstick
+
 import IQKeyboardManagerSwift
 
 enum CreateTripAction {
@@ -34,15 +34,15 @@ final class CreateTripRootView: ViewBase<Trip, CreateTripAction> {
 
     private let mode: CreateTripControllerMode
 
-    let destination = TextField().styled(using: Styles.textField)
+    let destination = Material.TextField().styled(using: Styles.textField)
     let destinationButtonOverlay = UIButton()
 
     private let beginOverrideSubject = PublishSubject<Date>()
-    let begin = TextField().styled(using: Styles.textField)
+    let begin = Material.TextField().styled(using: Styles.textField)
     private let beginToolbar = IQToolbar()
 
     private let endOverrideSubject = PublishSubject<Date>()
-    let end = TextField().styled(using: Styles.textField)
+    let end = Material.TextField().styled(using: Styles.textField)
     private let endToolbar = IQToolbar()
 
     let comment = TextView().styled(using: Styles.comment)
@@ -161,7 +161,7 @@ final class CreateTripRootView: ViewBase<Trip, CreateTripAction> {
 
 extension CreateTripRootView {
     fileprivate struct Styles {
-        static func textField(textField: TextField) {
+        static func textField(textField: Material.TextField) {
             textField.dividerActiveColor = Colors.accent
             textField.placeholderActiveColor = Colors.accent
             textField.font = Fonts.displayLight(size: 16)

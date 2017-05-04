@@ -6,7 +6,7 @@
 //  Copyright © 2017 Brightify. All rights reserved.
 //
 
-import Lipstick
+import UIKit
 
 struct Fonts {
     static func displayBlack(size: CGFloat) -> UIFont {

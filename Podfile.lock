@@ -69,13 +69,11 @@ PODS:
   - IQKeyboardManagerSwift (4.0.9)
   - JGProgressHUD (1.3.6)
   - Kingfisher (3.6.2)
-  - KZFileWatchers (1.0.2)
-  - Lipstick (0.5.2)
   - Material (2.4.10):
     - Material/Core (= 2.4.10)
   - Material/Core (2.4.10)
   - Nimble (5.1.1)
-  - Protobuf (3.2.1)
+  - Protobuf (3.3.0)
   - Quick (1.1.0)
   - Reactant (1.0.0):
     - Reactant/Core (= 1.0.0)
@@ -91,6 +89,8 @@ PODS:
     - SnapKit (~> 3.0)
   - Reactant/Core (1.0.0):
     - Reactant/Configuration
+    - RxCocoa (~> 3.0)
+    - RxOptional (~> 3.0)
     - RxSwift (~> 3.0)
     - SnapKit (~> 3.0)
   - Reactant/Result (1.0.0):
@@ -99,6 +99,7 @@ PODS:
     - RxSwift (~> 3.0)
   - Reactant/StaticMap (1.0.0):
     - Kingfisher (~> 3.0)
+    - Reactant/Core
     - RxCocoa (~> 3.0)
   - Reactant/TableView (1.0.0):
     - Reactant/Core
@@ -106,17 +107,15 @@ PODS:
     - RxDataSources (~> 1.0)
   - Reactant/Validation (1.0.0):
     - Result (~> 3.0)
-  - ReactantLiveUI (0.1.0):
-    - KZFileWatchers
-    - Reactant
-    - Reactant/TableView
+  - ReactantLiveUI (0.1.1):
+    - Reactant (> 1.0)
+    - Reactant/TableView (> 1.0)
     - RxCocoa
-    - SWXMLHash
-  - ReactantUI (0.1.0)
+  - ReactantUI (0.1.1)
   - Result (3.2.1)
-  - RxBlocking (3.4.0):
+  - RxBlocking (3.4.1):
     - RxSwift (~> 3.4)
-  - RxCocoa (3.4.0):
+  - RxCocoa (3.4.1):
     - RxSwift (~> 3.4)
   - RxDataSources (1.0.3):
     - RxCocoa (~> 3.0)
@@ -128,7 +127,7 @@ PODS:
   - RxOptional (3.1.3):
     - RxCocoa
     - RxSwift
-  - RxSwift (3.4.0)
+  - RxSwift (3.4.1)
   - SCLAlertView (0.7.0)
   - SnapKit (3.2.0)
   - SuperDelegate (0.9.0)
@@ -136,7 +135,6 @@ PODS:
   - SwiftGen (4.1.0)
   - SwiftKeychainWrapper (3.0.1)
   - SwipeBack (1.1.1)
-  - SWXMLHash (3.0.4)
 
 DEPENDENCIES:
   - AFImageHelper (= 3.2.1)
@@ -150,20 +148,19 @@ DEPENDENCIES:
   - Firebase/Database (~> 3.14.0)
   - IQKeyboardManagerSwift (~> 4.0.5)
   - JGProgressHUD (~> 1.3.1)
-  - Lipstick (~> 0.5)
   - Material (= 2.4.10)
   - Nimble (~> 5.0)
   - Quick (~> 1.1.0)
-  - Reactant/ActivityIndicator (from `https://github.com/Brightify/Reactant.git`, branch `master`)
-  - Reactant/CollectionView (from `https://github.com/Brightify/Reactant.git`, branch `master`)
-  - Reactant/Configuration (from `https://github.com/Brightify/Reactant.git`, branch `master`)
-  - Reactant/Core (from `https://github.com/Brightify/Reactant.git`, branch `master`)
-  - Reactant/Result (from `https://github.com/Brightify/Reactant.git`, branch `master`)
-  - Reactant/StaticMap (from `https://github.com/Brightify/Reactant.git`, branch `master`)
-  - Reactant/TableView (from `https://github.com/Brightify/Reactant.git`, branch `master`)
-  - Reactant/Validation (from `https://github.com/Brightify/Reactant.git`, branch `master`)
-  - ReactantLiveUI (from `https://github.com/Brightify/ReactantUI.git`, branch `master`)
-  - ReactantUI (from `https://github.com/Brightify/ReactantUI.git`, branch `master`)
+  - Reactant/ActivityIndicator (~> 1.0)
+  - Reactant/CollectionView (~> 1.0)
+  - Reactant/Configuration (~> 1.0)
+  - Reactant/Core (~> 1.0)
+  - Reactant/Result (~> 1.0)
+  - Reactant/StaticMap (~> 1.0)
+  - Reactant/TableView (~> 1.0)
+  - Reactant/Validation (~> 1.0)
+  - ReactantLiveUI (~> 0.1)
+  - ReactantUI (~> 0.1)
   - RxBlocking (~> 3.0)
   - RxNimble (~> 1.0)
   - SCLAlertView (~> 0.7.0)
@@ -177,29 +174,11 @@ EXTERNAL SOURCES:
   Fetcher:
     :branch: develop
     :git: https://github.com/Brightify/Fetcher.git
-  Reactant:
-    :branch: master
-    :git: https://github.com/Brightify/Reactant.git
-  ReactantLiveUI:
-    :branch: master
-    :git: https://github.com/Brightify/ReactantUI.git
-  ReactantUI:
-    :branch: master
-    :git: https://github.com/Brightify/ReactantUI.git
 
 CHECKOUT OPTIONS:
   Fetcher:
     :commit: 8be048ad528f0fa768c27be9e4e6bd1c24ca2e28
     :git: https://github.com/Brightify/Fetcher.git
-  Reactant:
-    :commit: 7901278c9d73580f26d87d23529568893e9a1efa
-    :git: https://github.com/Brightify/Reactant.git
-  ReactantLiveUI:
-    :commit: 3df8750e7def0364e8fe0f21e3716db9bc88badc
-    :git: https://github.com/Brightify/ReactantUI.git
-  ReactantUI:
-    :commit: 3df8750e7def0364e8fe0f21e3716db9bc88badc
-    :git: https://github.com/Brightify/ReactantUI.git
 
 SPEC CHECKSUMS:
   AFImageHelper: 9142599fb4f826b480d177902ab7f0c961bc966c
@@ -220,22 +199,20 @@ SPEC CHECKSUMS:
   IQKeyboardManagerSwift: 2eefe6c429b86aa08bfbc1b5c891164d754adf91
   JGProgressHUD: cd599e041ab8363ac5ce83a21a6d95e21d359152
   Kingfisher: 2c94e72c6830622c71d06adf4ea024c37d316830
-  KZFileWatchers: a2c799ad7f14ce41e06fbd282f4b1cd12486121e
-  Lipstick: 23222e74882be5b750993ac3e6156882656f7308
   Material: ef1e6da2e242d582205c87847a5346138894a633
   Nimble: 415e3aa3267e7bc2c96b05fa814ddea7bb686a29
-  Protobuf: 2ccbaf193f6c65adc67745453ca0c13234c32796
+  Protobuf: d582fecf68201eac3d79ed61369ef45734394b9c
   Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
-  Reactant: ed2c0fe5391df1c19c3f62542785d8fd6edfa7ec
-  ReactantLiveUI: 1085c0bc2e63c844e3f82f1b27341628d596efeb
-  ReactantUI: 5da42a33978943e5821c9eabc54a45ddafa8c40b
+  Reactant: e6ff6b1ff03591edb8829152aedbd1e71024aac2
+  ReactantLiveUI: 39bc040f5fdcedee0894442a9c50b36b14d28afa
+  ReactantUI: 6f9a041787d2d89f1b95e5adb19bb5ff6c0446e6
   Result: 2453a22e5c5b11c0c3a478736e82cd02f763b781
-  RxBlocking: 1797b8c1a3ad7b08965145e6e2294c2e101515aa
-  RxCocoa: d14ef6b6029e1ddc6e966508c09289090de68ff9
+  RxBlocking: 1e8c41cfe7ca2fc0e19d0e616c553845c63cbbd3
+  RxCocoa: a8a5f1d061d0043e28f56976829f31ce63e8eb09
   RxDataSources: a021a0e944ba5f7991259829d973afdbfa719c0b
   RxNimble: 84bd236a9086723284231fd70ea64d9195313453
   RxOptional: b97b59183af80d1e729ac9e51d09a10be668d6a8
-  RxSwift: 3789a1af753002a14edecdb698a2424624296a9c
+  RxSwift: 656f8fbeca5bc372121a72d9ebdd3cd3bc0ffade
   SCLAlertView: 8a14ffc40590c619e183eed2298b854385f30be1
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
   SuperDelegate: b70c7afddf8525217d0e074b850b8ea3cc6f8abd
@@ -243,8 +220,7 @@ SPEC CHECKSUMS:
   SwiftGen: d29fd8b7aa52092411d415fb09d0abd3d79ea1a5
   SwiftKeychainWrapper: 38952a3636320ae61bad3513cadd870929de7a4a
   SwipeBack: d6759601b40da1f4161033feb30ab475d7d04322
-  SWXMLHash: 29d20b84692fc319ea8ed933058fe7d8d005139b
 
-PODFILE CHECKSUM: a0e99c87eb96d3cacb3cdcf15afd5a3d14026fac
+PODFILE CHECKSUM: 113afd5451d931e4bcd8e7a118c2bfcfbcdd5cff
 
 COCOAPODS: 1.2.1

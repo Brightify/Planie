@@ -10,7 +10,7 @@ import Reactant
 import DataMapper
 import RxSwift
 import RxCocoa
-import Lipstick
+
 import IQKeyboardManagerSwift
 
 final class CitySelectionController: ControllerBase<String, CitySelectionRootView> {
