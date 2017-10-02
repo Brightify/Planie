@@ -50,7 +50,7 @@
             field="signUp"
             layout:centerX="super"
             layout:below="passwordBackground offset(8)"
-            layout:width="== centeringContainer divided(by:2)"
+            layout:width="centeringContainer divided(by:2)"
             layout:height="44"
             layout:bottom="super"/>
     </Container>

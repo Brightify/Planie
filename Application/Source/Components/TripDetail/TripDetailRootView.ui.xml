@@ -10,6 +10,7 @@
 
     <View
         field="map"
+        backgroundColor="blue"
         clipsToBounds="true"
         layout:fillHorizontally="super"
         layout:top="super"

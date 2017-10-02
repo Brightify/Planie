@@ -39,5 +39,5 @@
         layout:fillHorizontally="destination"
         layout:below="begin offset(35)"
         layout:bottom="super offset(-30)"
-        layout:height=">= 60" />
+        layout:height=":gt 60" />
 </Component>
