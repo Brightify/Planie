@@ -32,7 +32,7 @@
         layout:fillHorizontally="super inset(20)"
         layout:centerY="super">
 
-        <Container
+        <VisualEffectView
           layout:top="centeringContainer"
           layout:fillHorizontally="super inset(16)"
           layout:height="44"
@@ -40,8 +40,8 @@
           <TextField
             field="email"
             layout:edges="super inset(8)"/>
-        </Container>
-        <Container
+        </VisualEffectView>
+        <VisualEffectView
           layout:below="emailBackground offset(8)"
           layout:fillHorizontally="super inset(16)"
           layout:height="44"
@@ -49,7 +49,7 @@
           <TextField
             field="password"
             layout:edges="super inset(8)"/>
-        </Container>
+        </VisualEffectView>
         <Button
           field="logIn"
           layout:leading="emailBackground"

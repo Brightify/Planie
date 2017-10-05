@@ -9,7 +9,7 @@
     <styles name="ReactantStyles">
         <LabelStyle name="destination" textColor="white" font=":light@14"/>
         <LabelStyle name="date" textColor="white" font=":regular@12" numberOfLines="0"/>
-        <ViewStyle  name="map" clipsToBounds="true"/>
+        <ContainerStyle  name="map" clipsToBounds="true"/>
     </styles>
 
     <Container
