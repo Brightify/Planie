@@ -96,9 +96,9 @@ final class TripTableController: ControllerBase<Void, TripTableRootView>, UITabl
 
         trips.map { $0.isNotEmpty ? .items($0) : .empty(message: L10n.Trip.List.empty) }
             .subscribe(onNext: rootView.setComponentState)
-            .addDisposableTo(lifetimeDisposeBag)
+            .disposed(by: lifetimeDisposeBag)
 
-        trips.map { $0.isNotEmpty }.subscribe(printButton.rx.isEnabled).addDisposableTo(lifetimeDisposeBag)
+        trips.map { $0.isNotEmpty }.subscribe(printButton.rx.isEnabled).disposed(by: lifetimeDisposeBag)
 
         printButton.rx.tap
             .withLatestFrom(trips)
@@ -109,7 +109,7 @@ final class TripTableController: ControllerBase<Void, TripTableRootView>, UITabl
             .map(PrintUtils.printableHtml)
             .flatMapLatest(reactions.printItinerary)
             .subscribe()
-            .addDisposableTo(lifetimeDisposeBag)
+            .disposed(by: lifetimeDisposeBag)
 
         logout.rx.tap
             .flatMapLatest { [reactions] in
@@ -121,14 +121,14 @@ final class TripTableController: ControllerBase<Void, TripTableRootView>, UITabl
             .subscribe(onNext: { [reactions] _ in
                 reactions.loggedOut?()
             })
-            .addDisposableTo(lifetimeDisposeBag)
+            .disposed(by: lifetimeDisposeBag)
 
         createTripButton.rx.tap
             .flatMapLatest(reactions.createTrip)
             .subscribe()
-            .addDisposableTo(lifetimeDisposeBag)
+            .disposed(by: lifetimeDisposeBag)
 
-//        rootView.tableView.rx.setDelegate(self).addDisposableTo(lifetimeDisposeBag)
+//        rootView.tableView.rx.setDelegate(self).disposed(by: lifetimeDisposeBag)
     }
 
     override func update() {

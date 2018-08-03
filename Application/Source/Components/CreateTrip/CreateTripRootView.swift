@@ -76,8 +76,9 @@ final class CreateTripRootView: ViewBase<Trip, CreateTripAction> {
     }
 
     private func renderKeyboardToolbars() {
-        let doneButton = IQBarButtonItem(title: L10n.Common.done, style: .done) { [weak self] _ in
+        let doneButton = IQBarButtonItem(title: L10n.Common.done, style: .done) { [weak self] in
             self?.endEditing(true)
+            return
         }
         let flexibleSpace = IQBarButtonItem(barButtonSystemItem: .flexibleSpace)
         
@@ -92,7 +93,7 @@ final class CreateTripRootView: ViewBase<Trip, CreateTripAction> {
                 .subscribe(onNext: { [beginOverrideSubject] in
                     beginOverrideSubject.onNext($0)
                 })
-                .addDisposableTo(stateDisposeBag)
+                .disposed(by: stateDisposeBag)
         }
 
         if let beginDate = componentState.begin,
@@ -108,7 +109,7 @@ final class CreateTripRootView: ViewBase<Trip, CreateTripAction> {
                 .subscribe(onNext: { [endOverrideSubject] in
                     endOverrideSubject.onNext($0)
                 })
-                .addDisposableTo(stateDisposeBag)
+                .disposed(by: stateDisposeBag)
         } else {
             let todayButton = IQBarButtonItem(title: L10n.Trip.Create.today, style: .plain)
             endToolbar.items = [todayButton, flexibleSpace, doneButton]
@@ -118,7 +119,7 @@ final class CreateTripRootView: ViewBase<Trip, CreateTripAction> {
                 .subscribe(onNext: { [endOverrideSubject] in
                     endOverrideSubject.onNext($0)
                 })
-                .addDisposableTo(stateDisposeBag)
+                .disposed(by: stateDisposeBag)
         }
     }
 
@@ -136,8 +137,10 @@ final class CreateTripRootView: ViewBase<Trip, CreateTripAction> {
         end.inputView = endDatePicker
         end.inputAccessoryView = endToolbar
 
-        comment.placeholderLabel = UILabel(text: L10n.Trip.comment).styled(using: Styles.commentPlaceholder)
-        comment.titleLabel = UILabel().styled(using: ReactantStyles.commentTitle)
+        comment.placeholderLabel.apply(style: Styles.commentPlaceholder)
+        comment.placeholderLabel.text = L10n.Trip.comment
+        // FIXME
+//        comment.titleLabel = UILabel().styled(using: ReactantStyles.commentTitle)
         comment.accessibilityLabel = L10n.Trip.comment
     }
 
@@ -178,7 +181,8 @@ extension CreateTripRootView {
             textView.textContainerInset = UIEdgeInsets.zero
             textView.isScrollEnabled = false
             textView.textColor = UIColor.black.fadedOut(by: 62%)
-            textView.titleLabelActiveColor = Colors.accent
+            // FIXME
+//            textView.titleLabelActiveColor = Colors.accent
         }
 
         static func commentPlaceholder(label: UILabel) {

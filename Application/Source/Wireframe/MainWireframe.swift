@@ -116,9 +116,7 @@ final class MainWireframe: Wireframe {
                     let (tripController, tripSaved) = self.createTrip(profile: profile, mode: .create, close: { provider.navigation?.dismiss() })
                     tripController.componentState = Trip()
                     tripController.navigationItem.leftBarButtonItem =
-                        UIBarButtonItem(title: L10n.Common.cancel, style: .plain) { _ in
-                            navigationController.dismiss()
-                    }
+                        UIBarButtonItem(title: L10n.Common.cancel, style: .plain) { navigationController.dismiss() }
                     navigationController.push(controller: tripController)
                     provider.navigation?.present(navigationController, animated: true)
                     return tripSaved.do(onNext: { _ in provider.navigation?.dismiss() })
@@ -168,9 +166,7 @@ final class MainWireframe: Wireframe {
                     let navigationController = UINavigationController()
                     let (tripController, tripSaved) = self.createTrip(profile: profile, mode: .edit, close: { provider.navigation?.dismiss() })
                     tripController.componentState = trip
-                    tripController.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain) { _ in
-                        navigationController.dismiss()
-                    }
+                    tripController.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain) { navigationController.dismiss() }
                     navigationController.push(controller: tripController)
                     provider.navigation?.present(navigationController, animated: true)
                     return tripSaved.do(onNext: { _ in provider.navigation?.dismiss() })

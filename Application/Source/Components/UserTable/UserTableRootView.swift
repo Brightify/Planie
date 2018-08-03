@@ -10,7 +10,8 @@
 import Reactant
 
 final class UserTableRootView: PlainTableView<UserCell> {
-    
+
+    @objc
     init() {
         super.init(
             cellFactory: UserCell.init,
@@ -18,7 +19,7 @@ final class UserTableRootView: PlainTableView<UserCell> {
             reloadable: false
         )
 
-        height = UserCell.height
+        rowHeight = UserCell.height
         footerView = UIView()
         tableView.separatorColor = Colors.background
     }

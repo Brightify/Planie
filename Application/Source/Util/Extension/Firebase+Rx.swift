@@ -196,7 +196,7 @@ extension FIRDatabaseReference {
     func delete<T: Serializable>(_ object: T) -> Observable<Result<Void, FirebaseStoreError>> where T: FirebaseEntity {
         return Observable.create { observer in
             guard let key = object.id else {
-                observer.onLast(.success())
+                observer.onLast(.success(()))
                 return Disposables.create()
             }
 
@@ -204,7 +204,7 @@ extension FIRDatabaseReference {
                 if let error = error {
                     observer.onLast(.failure(.writeDenied(error)))
                 } else {
-                    observer.onLast(.success())
+                    observer.onLast(.success(()))
                 }
             }
             return Disposables.create()

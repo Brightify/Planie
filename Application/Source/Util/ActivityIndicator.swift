@@ -71,7 +71,7 @@ let loadingIndicator: ActivityIndicator<String> = {
         } else if !loading && hud.isVisible {
             hud.dismiss()
         }
-        }).addDisposableTo(activityIndicator.disposeBag)
+        }).disposed(by: activityIndicator.disposeBag)
     
     return activityIndicator
 }()

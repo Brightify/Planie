@@ -33,7 +33,7 @@ final class InitialController: ControllerBase<Void, InitialRootView> {
             .delaySubscription(0, scheduler: MainScheduler.instance)
             .map { $0.value }
             .subscribe(onNext: reactions.initComplete)
-            .addDisposableTo(lifetimeDisposeBag)
+            .disposed(by: lifetimeDisposeBag)
     }
 
     override func update() {

@@ -26,7 +26,7 @@ final class SearchBox: ViewBase<String, Void> {
             .subscribe(onNext: { [weak self] in
                 self?.componentState = $0
             })
-            .addDisposableTo(lifetimeDisposeBag)
+            .disposed(by: lifetimeDisposeBag)
     }
 
     override func update() {

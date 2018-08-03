@@ -38,14 +38,14 @@ final class RegistrationController: ControllerBase<Void, RegistrationRootView> {
 
             switch validatedCredentials {
             case .success(let email, let password):
-                IQKeyboardManager.sharedManager().resignFirstResponder()
+                IQKeyboardManager.shared.resignFirstResponder()
                 let register = dependencies.credentialAuthProvider.register(email: email, password: password)
                     .trackActivity(in: loadingIndicator)
-                    .shareReplay(1)
+                    .share(replay: 1)
 
                 register.filterError()
                     .subscribe(onNext: reactions.registrationSuccessful)
-                    .addDisposableTo(lifetimeDisposeBag)
+                    .disposed(by: lifetimeDisposeBag)
 
                 register.errorOnly()
                     .map { error in
@@ -63,7 +63,7 @@ final class RegistrationController: ControllerBase<Void, RegistrationRootView> {
                     .subscribe(onNext: {
                         _ = errorAlert(title: L10n.Auth.Error.signupTitle, subTitle: $0)
                     })
-                    .addDisposableTo(lifetimeDisposeBag)
+                    .disposed(by: lifetimeDisposeBag)
 
             case .failure(let error):
                 let errorMessage: String

@@ -16,11 +16,9 @@ final class TripTableRootView: PlainTableView<TripCell> {
         return []
     }
 
+    @objc
     init() {
-        super.init(
-            cellFactory: TripCell.init,
-            reloadable: false
-        )
+        super.init(cellFactory: TripCell.init)
 
         tableView.rowHeight = TripCell.height
         tableView.separatorStyle = .none

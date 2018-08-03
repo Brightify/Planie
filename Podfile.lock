@@ -1,27 +1,28 @@
 PODS:
   - AFImageHelper (3.2.1)
-  - Alamofire (4.4.0)
-  - Crashlytics (3.8.4):
+  - Alamofire (4.7.3)
+  - Crashlytics (3.8.6):
     - Fabric (~> 1.6.3)
-  - DataMapper (0.1.0):
-    - DataMapper/Core (= 0.1.0)
-    - DataMapper/JsonSerializer (= 0.1.0)
-  - DataMapper/Core (0.1.0)
-  - DataMapper/JsonSerializer (0.1.0):
+  - DataMapper (0.2.0):
+    - DataMapper/Core (= 0.2.0)
+    - DataMapper/JsonSerializer (= 0.2.0)
+  - DataMapper/Core (0.2.0)
+  - DataMapper/JsonSerializer (0.2.0):
     - DataMapper/Core
-  - Fabric (1.6.11)
-  - Fetcher (0.1.0):
-    - Fetcher/AlamofireRequestPerformer (= 0.1.0)
-    - Fetcher/Core (= 0.1.0)
-  - Fetcher/AlamofireRequestPerformer (0.1.0):
+  - Differentiator (3.0.2)
+  - Fabric (1.6.13)
+  - Fetcher (0.3.1):
+    - Fetcher/AlamofireRequestPerformer (= 0.3.1)
+    - Fetcher/Core (= 0.3.1)
+  - Fetcher/AlamofireRequestPerformer (0.3.1):
     - Alamofire (~> 4.3)
     - Fetcher/Core
-  - Fetcher/Core (0.1.0):
-    - DataMapper (~> 0.1)
-    - Result (~> 3.0)
-  - Fetcher/RxFetcher (0.1.0):
+  - Fetcher/Core (0.3.1):
+    - DataMapper (~> 0.2)
+    - Result (~> 3.2)
+  - Fetcher/RxFetcher (0.3.1):
     - Fetcher/Core
-    - RxSwift (~> 3.0)
+    - RxSwift (~> 4.0)
   - Firebase/Auth (3.14.0):
     - Firebase/Core
     - FirebaseAuth (= 3.1.1)
@@ -37,101 +38,107 @@ PODS:
   - FirebaseAnalytics (3.7.0):
     - FirebaseCore (~> 3.5)
     - FirebaseInstanceID (~> 1.0)
-    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
   - FirebaseAuth (3.1.1):
     - FirebaseAnalytics (~> 3.7)
-    - GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)
+    - "GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)"
     - GTMSessionFetcher/Core (~> 1.1)
   - FirebaseCore (3.5.1):
-    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
   - FirebaseCrash (1.1.6):
     - FirebaseAnalytics (~> 3.7)
     - FirebaseInstanceID (~> 1.0)
     - GoogleToolboxForMac/Logger (~> 2.1)
-    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
     - Protobuf (~> 3.1)
   - FirebaseDatabase (3.1.2):
     - FirebaseAnalytics (~> 3.7)
   - FirebaseInstanceID (1.0.9)
-  - GoogleToolboxForMac/DebugUtils (2.1.1):
-    - GoogleToolboxForMac/Defines (= 2.1.1)
-  - GoogleToolboxForMac/Defines (2.1.1)
-  - GoogleToolboxForMac/Logger (2.1.1):
-    - GoogleToolboxForMac/Defines (= 2.1.1)
-  - GoogleToolboxForMac/NSData+zlib (2.1.1):
-    - GoogleToolboxForMac/Defines (= 2.1.1)
-  - GoogleToolboxForMac/NSDictionary+URLArguments (2.1.1):
-    - GoogleToolboxForMac/DebugUtils (= 2.1.1)
-    - GoogleToolboxForMac/Defines (= 2.1.1)
-    - GoogleToolboxForMac/NSString+URLArguments (= 2.1.1)
-  - GoogleToolboxForMac/NSString+URLArguments (2.1.1)
-  - GTMSessionFetcher/Core (1.1.9)
-  - IQKeyboardManagerSwift (4.0.9)
+  - GoogleToolboxForMac/DebugUtils (2.1.4):
+    - GoogleToolboxForMac/Defines (= 2.1.4)
+  - GoogleToolboxForMac/Defines (2.1.4)
+  - GoogleToolboxForMac/Logger (2.1.4):
+    - GoogleToolboxForMac/Defines (= 2.1.4)
+  - "GoogleToolboxForMac/NSData+zlib (2.1.4)":
+    - GoogleToolboxForMac/Defines (= 2.1.4)
+  - "GoogleToolboxForMac/NSDictionary+URLArguments (2.1.4)":
+    - GoogleToolboxForMac/DebugUtils (= 2.1.4)
+    - GoogleToolboxForMac/Defines (= 2.1.4)
+    - "GoogleToolboxForMac/NSString+URLArguments (= 2.1.4)"
+  - "GoogleToolboxForMac/NSString+URLArguments (2.1.4)"
+  - GTMSessionFetcher/Core (1.2.0)
+  - IQKeyboardManagerSwift (6.1.1)
   - JGProgressHUD (1.3.6)
-  - Kingfisher (3.6.2)
-  - Material (2.4.10):
-    - Material/Core (= 2.4.10)
-  - Material/Core (2.4.10)
-  - Nimble (5.1.1)
-  - Protobuf (3.3.0)
+  - Kingfisher (4.8.1)
+  - Material (2.16.4):
+    - Material/Core (= 2.16.4)
+  - Material/Core (2.16.4):
+    - Motion (~> 1.4.3)
+  - Motion (1.4.3):
+    - Motion/Core (= 1.4.3)
+  - Motion/Core (1.4.3)
+  - Nimble (7.1.3)
+  - Protobuf (3.6.0)
   - Quick (1.1.0)
-  - Reactant (1.0.0):
-    - Reactant/Core (= 1.0.0)
-    - Reactant/Result (= 1.0.0)
-  - Reactant/ActivityIndicator (1.0.0):
-    - RxCocoa (~> 3.0)
-  - Reactant/CollectionView (1.0.0):
+  - Reactant (1.2.0):
+    - Reactant/Core (= 1.2.0)
+    - Reactant/Result (= 1.2.0)
+  - Reactant/ActivityIndicator (1.2.0):
+    - RxCocoa (~> 4.0)
+  - Reactant/CollectionView (1.2.0):
     - Reactant/Core
-    - RxCocoa (~> 3.0)
-    - RxDataSources (~> 1.0)
-  - Reactant/Configuration (1.0.0):
-    - RxSwift (~> 3.0)
-    - SnapKit (~> 3.0)
-  - Reactant/Core (1.0.0):
+    - RxCocoa (~> 4.0)
+    - RxDataSources (~> 3.0)
+  - Reactant/Configuration (1.2.0)
+  - Reactant/Core (1.2.0):
     - Reactant/Configuration
-    - RxCocoa (~> 3.0)
+    - RxCocoa (~> 4.0)
     - RxOptional (~> 3.0)
-    - RxSwift (~> 3.0)
-    - SnapKit (~> 3.0)
-  - Reactant/Result (1.0.0):
+    - RxSwift (~> 4.0)
+    - SnapKit (~> 4.0)
+  - Reactant/FallbackSafeAreaInsets (1.2.0):
+    - Reactant/Core
+  - Reactant/Result (1.2.0):
     - Result (~> 3.0)
     - RxOptional (~> 3.0)
-    - RxSwift (~> 3.0)
-  - Reactant/StaticMap (1.0.0):
-    - Kingfisher (~> 3.0)
+    - RxSwift (~> 4.0)
+  - Reactant/StaticMap (1.2.0):
+    - Kingfisher (~> 4.0)
     - Reactant/Core
-    - RxCocoa (~> 3.0)
-  - Reactant/TableView (1.0.0):
+    - RxCocoa (~> 4.0)
+  - Reactant/TableView (1.2.0):
     - Reactant/Core
-    - RxCocoa (~> 3.0)
-    - RxDataSources (~> 1.0)
-  - Reactant/Validation (1.0.0):
+    - RxCocoa (~> 4.0)
+    - RxDataSources (~> 3.0)
+  - Reactant/Validation (1.2.0):
     - Result (~> 3.0)
-  - ReactantLiveUI (0.1.3):
+  - ReactantLiveUI (0.3.0):
     - Reactant (> 1.0)
+    - Reactant/FallbackSafeAreaInsets (> 1.0)
     - Reactant/TableView (> 1.0)
     - RxCocoa
-  - ReactantUI (0.1.3)
-  - Result (3.2.1)
-  - RxBlocking (3.4.1):
-    - RxSwift (~> 3.4)
-  - RxCocoa (3.4.1):
-    - RxSwift (~> 3.4)
-  - RxDataSources (1.0.3):
-    - RxCocoa (~> 3.0)
-    - RxSwift (~> 3.0)
-  - RxNimble (1.0.0):
-    - Nimble (~> 5.1)
-    - RxBlocking (~> 3.0)
-    - RxSwift (~> 3.0)
-  - RxOptional (3.1.3):
-    - RxCocoa
-    - RxSwift
-  - RxSwift (3.4.1)
-  - SCLAlertView (0.7.0)
-  - SnapKit (3.2.0)
+  - ReactantUI (0.3.0)
+  - Result (3.2.4)
+  - RxBlocking (4.2.0):
+    - RxSwift (~> 4.0)
+  - RxCocoa (4.2.0):
+    - RxSwift (~> 4.0)
+  - RxDataSources (3.0.2):
+    - Differentiator (~> 3.0)
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
+  - RxNimble (4.1.0):
+    - Nimble (~> 7.0)
+    - RxBlocking (~> 4.0)
+    - RxSwift (~> 4.0)
+  - RxOptional (3.5.0):
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
+  - RxSwift (4.2.0)
+  - SCLAlertView (0.8)
+  - SnapKit (4.0.0)
   - SuperDelegate (0.9.0)
-  - SwiftDate (4.0.14)
+  - SwiftDate (4.5.1)
   - SwiftGen (4.1.0)
   - SwiftKeychainWrapper (3.0.1)
   - SwipeBack (1.1.1)
@@ -141,86 +148,141 @@ DEPENDENCIES:
   - Crashlytics (~> 3.8.4)
   - DataMapper (~> 0.1)
   - Fabric (~> 1.6.11)
-  - Fetcher (from `https://github.com/Brightify/Fetcher.git`, branch `develop`)
-  - Fetcher/RxFetcher (from `https://github.com/Brightify/Fetcher.git`, branch `develop`)
+  - Fetcher (~> 0.3.1)
+  - Fetcher/RxFetcher (~> 0.3.1)
   - Firebase/Auth (~> 3.14.0)
   - Firebase/Crash (~> 3.14.0)
   - Firebase/Database (~> 3.14.0)
-  - IQKeyboardManagerSwift (~> 4.0.5)
+  - IQKeyboardManagerSwift (~> 6.1.1)
   - JGProgressHUD (~> 1.3.1)
-  - Material (= 2.4.10)
-  - Nimble (~> 5.0)
+  - Material (= 2.16.4)
+  - Nimble (~> 7.0)
   - Quick (~> 1.1.0)
-  - Reactant/ActivityIndicator (~> 1.0)
-  - Reactant/CollectionView (~> 1.0)
-  - Reactant/Configuration (~> 1.0)
-  - Reactant/Core (~> 1.0)
-  - Reactant/Result (~> 1.0)
-  - Reactant/StaticMap (~> 1.0)
-  - Reactant/TableView (~> 1.0)
-  - Reactant/Validation (~> 1.0)
-  - ReactantLiveUI (~> 0.1)
-  - ReactantUI (~> 0.1)
-  - RxBlocking (~> 3.0)
-  - RxNimble (~> 1.0)
-  - SCLAlertView (~> 0.7.0)
+  - Reactant/ActivityIndicator (from `https://github.com/Brightify/Reactant.git`, commit `b14e52e`)
+  - Reactant/CollectionView (from `https://github.com/Brightify/Reactant.git`, commit `b14e52e`)
+  - Reactant/Configuration (from `https://github.com/Brightify/Reactant.git`, commit `b14e52e`)
+  - Reactant/Core (from `https://github.com/Brightify/Reactant.git`, commit `b14e52e`)
+  - Reactant/Result (from `https://github.com/Brightify/Reactant.git`, commit `b14e52e`)
+  - Reactant/StaticMap (from `https://github.com/Brightify/Reactant.git`, commit `b14e52e`)
+  - Reactant/TableView (from `https://github.com/Brightify/Reactant.git`, commit `b14e52e`)
+  - Reactant/Validation (from `https://github.com/Brightify/Reactant.git`, commit `b14e52e`)
+  - ReactantLiveUI (from `https://github.com/Brightify/ReactantUI.git`, branch `conditions`)
+  - ReactantUI (from `https://github.com/Brightify/ReactantUI.git`, branch `conditions`)
+  - RxBlocking (~> 4.0)
+  - RxNimble (~> 4.0)
+  - SCLAlertView (~> 0.8)
   - SuperDelegate (= 0.9.0)
-  - SwiftDate (~> 4.0.13)
+  - SwiftDate (~> 4.5.1)
   - SwiftGen (= 4.1.0)
   - SwiftKeychainWrapper (= 3.0.1)
   - SwipeBack (~> 1.0)
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFImageHelper
+    - Alamofire
+    - Crashlytics
+    - DataMapper
+    - Differentiator
+    - Fabric
+    - Fetcher
+    - Firebase
+    - FirebaseAnalytics
+    - FirebaseAuth
+    - FirebaseCore
+    - FirebaseCrash
+    - FirebaseDatabase
+    - FirebaseInstanceID
+    - GoogleToolboxForMac
+    - GTMSessionFetcher
+    - IQKeyboardManagerSwift
+    - JGProgressHUD
+    - Kingfisher
+    - Material
+    - Motion
+    - Nimble
+    - Protobuf
+    - Quick
+    - Result
+    - RxBlocking
+    - RxCocoa
+    - RxDataSources
+    - RxNimble
+    - RxOptional
+    - RxSwift
+    - SCLAlertView
+    - SnapKit
+    - SuperDelegate
+    - SwiftDate
+    - SwiftGen
+    - SwiftKeychainWrapper
+    - SwipeBack
+
 EXTERNAL SOURCES:
-  Fetcher:
-    :branch: develop
-    :git: https://github.com/Brightify/Fetcher.git
+  Reactant:
+    :commit: b14e52e
+    :git: https://github.com/Brightify/Reactant.git
+  ReactantLiveUI:
+    :branch: conditions
+    :git: https://github.com/Brightify/ReactantUI.git
+  ReactantUI:
+    :branch: conditions
+    :git: https://github.com/Brightify/ReactantUI.git
 
 CHECKOUT OPTIONS:
-  Fetcher:
-    :commit: 8be048ad528f0fa768c27be9e4e6bd1c24ca2e28
-    :git: https://github.com/Brightify/Fetcher.git
+  Reactant:
+    :commit: b14e52e
+    :git: https://github.com/Brightify/Reactant.git
+  ReactantLiveUI:
+    :commit: a54d204a25081047cb680e6c71ee9d92c67ad4ca
+    :git: https://github.com/Brightify/ReactantUI.git
+  ReactantUI:
+    :commit: a54d204a25081047cb680e6c71ee9d92c67ad4ca
+    :git: https://github.com/Brightify/ReactantUI.git
 
 SPEC CHECKSUMS:
   AFImageHelper: 9142599fb4f826b480d177902ab7f0c961bc966c
-  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
-  Crashlytics: 79e236942ca1e7fc641df1feb9a275360a78ab6a
-  DataMapper: 4d59a817ea6b207fbf91c3af7f19f7ccb3b5faad
-  Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
-  Fetcher: 47d463b44f2b9141ab97bf0c74c51934ba8ef81e
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  Crashlytics: 95d05f4e4c19a771250c4bd9ce344d996de32bbf
+  DataMapper: f33d650f587a3241216763ee6377e3c3f1041c47
+  Differentiator: a87be69eba49ec4ab460c7671143ee3a9eececfd
+  Fabric: 2fb5676bc811af011a04513451f463dac6803206
+  Fetcher: 887fc2c44d860d7881591954a3b09a7abdee4125
   Firebase: 85a581fb04e44f63ae9f4fbc8d6dabf4a4c18653
   FirebaseAnalytics: 0d1b7d81d5021155be37702a94ba1ec16d45365d
   FirebaseAuth: cc8a1824170adbd351edb7f994490a3fb5c18be6
   FirebaseCore: 225d40532489835a034b8f4e2c9c87fbf4f615a2
-  FirebaseCrash: db4c05d9c75baa050744d31b36357c8f1efba481
+  FirebaseCrash: 2f0facf656f4a8e948e77a852e6c475dde88ef59
   FirebaseDatabase: 05c96d7b43a7368dc91c07791adb49683e1738d1
   FirebaseInstanceID: 2d0518b1378fe9d685ef40cbdd63d2fdc1125339
-  GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
-  GTMSessionFetcher: 5c046c76a1f859bc9c187e918f18e4fc7bb57b5e
-  IQKeyboardManagerSwift: 2eefe6c429b86aa08bfbc1b5c891164d754adf91
+  GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
+  GTMSessionFetcher: 0c4baf0a73acd0041bf9f71ea018deedab5ea84e
+  IQKeyboardManagerSwift: 977affaeb4d6e971975c7790a6850f31d38f1207
   JGProgressHUD: cd599e041ab8363ac5ce83a21a6d95e21d359152
-  Kingfisher: 2c94e72c6830622c71d06adf4ea024c37d316830
-  Material: ef1e6da2e242d582205c87847a5346138894a633
-  Nimble: 415e3aa3267e7bc2c96b05fa814ddea7bb686a29
-  Protobuf: d582fecf68201eac3d79ed61369ef45734394b9c
+  Kingfisher: 868c1149679a7ab6869be118faa9b5aed154aaf0
+  Material: 4ed78690b09ffd148b5ffab6b4367fb1d8da1cd3
+  Motion: 153ba49692997888556c7a95207278a8b1f8be95
+  Nimble: 2839b01d1b31f6a6a7777a221f0d91cf52e8e27b
+  Protobuf: 0fc0ad8bec688b2a3017a139953e01374fedbd5f
   Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
-  Reactant: e6ff6b1ff03591edb8829152aedbd1e71024aac2
-  ReactantLiveUI: 00e28565d4f8cf76eafb24cc3010d0fa06228556
-  ReactantUI: 496eecd1dc479f52716e478bf47a2ec2cc77f408
-  Result: 2453a22e5c5b11c0c3a478736e82cd02f763b781
-  RxBlocking: 1e8c41cfe7ca2fc0e19d0e616c553845c63cbbd3
-  RxCocoa: a8a5f1d061d0043e28f56976829f31ce63e8eb09
-  RxDataSources: a021a0e944ba5f7991259829d973afdbfa719c0b
-  RxNimble: 84bd236a9086723284231fd70ea64d9195313453
-  RxOptional: b97b59183af80d1e729ac9e51d09a10be668d6a8
-  RxSwift: 656f8fbeca5bc372121a72d9ebdd3cd3bc0ffade
-  SCLAlertView: 8a14ffc40590c619e183eed2298b854385f30be1
-  SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
+  Reactant: 5e4f19b798a42b46a61db6d86b42b85d70f774d4
+  ReactantLiveUI: c36787e41b70c22cb6b47186b7008fb5d1d7bc77
+  ReactantUI: 55bbe6ba21bab8cdb5501928b46bb3e1b4cf336a
+  Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
+  RxBlocking: e339d8a6e752e25ade95ff858466c55436668f59
+  RxCocoa: 0b54909c902e1e581212a03e690bbd94032d8baa
+  RxDataSources: cb7c31e652a87ebb919da45f716bbb87b3765f6b
+  RxNimble: e5a34bf3b18d85406fc2a6e2cbc73aa2b4a858f0
+  RxOptional: bd32ff8ca9df4177683d56ffeb618a9d4d5d5cad
+  RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
+  SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   SuperDelegate: b70c7afddf8525217d0e074b850b8ea3cc6f8abd
-  SwiftDate: 4ef029fd3117cc287fe642658b9aca2217628976
+  SwiftDate: 7b56d42a221f582047287deb256b23fc5ed49a60
   SwiftGen: d29fd8b7aa52092411d415fb09d0abd3d79ea1a5
   SwiftKeychainWrapper: 38952a3636320ae61bad3513cadd870929de7a4a
   SwipeBack: d6759601b40da1f4161033feb30ab475d7d04322
 
-PODFILE CHECKSUM: 113afd5451d931e4bcd8e7a118c2bfcfbcdd5cff
+PODFILE CHECKSUM: 23334fecb41681f883d8b9446f67e19b1dd5f085
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.5.3

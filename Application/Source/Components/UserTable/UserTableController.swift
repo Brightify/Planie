@@ -60,12 +60,12 @@ final class UserTableController: ControllerBase<[UserProfile], UserTableRootView
             .subscribe(onNext: { [reactions] _ in
                 reactions.loggedOut?()
             })
-            .addDisposableTo(lifetimeDisposeBag)
+            .disposed(by: lifetimeDisposeBag)
 
         dependencies.userService.users()
             .map { [loggedInUser] in $0.filter { $0.id != loggedInUser.id } }
             .subscribe(onNext: setComponentState)
-            .addDisposableTo(lifetimeDisposeBag)
+            .disposed(by: lifetimeDisposeBag)
     }
 
     override func update() {

@@ -56,7 +56,7 @@ final class LoginService {
     func logout() -> Observable<Result<Void, FirebaseCommonError>> {
         do {
             try FIRAuth.auth()?.signOut()
-            return .just(.success())
+            return .just(.success(()))
         } catch {
             let firebaseError = FirebaseCommonError(error: error as NSError)
             return .just(.failure(firebaseError))

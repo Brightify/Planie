@@ -41,13 +41,13 @@ extension Trip {
     var dateRangeWithCountdown: String {
         let dateRange = [begin?.string(dateStyle: .medium, timeStyle: .none, in: nil),
                          end?.string(dateStyle: .medium, timeStyle: .none, in: nil)]
-            .flatMap { $0 }
+            .compactMap { $0 }
             .joined(separator: " - ")
         let countdown: String
         if let begin = begin, Date().isBefore(date: begin, granularity: .day) {
-            let naturalString = try? begin.colloquial(to: Date())
+            let naturalString = begin.colloquial(to: Date())
 
-            countdown = " (\(L10n.Trip.List.countdown((naturalString?.colloquial)!)))"
+            countdown = " (\(L10n.Trip.List.countdown(naturalString!)))"
         } else {
             countdown = ""
         }

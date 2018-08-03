@@ -48,7 +48,7 @@ final class TripDetailController: ScrollControllerBase<Trip, TripDetailRootView>
                 reactions.editTrip($0)
             }
             .subscribe(onNext: setComponentState)
-            .addDisposableTo(lifetimeDisposeBag)
+            .disposed(by: lifetimeDisposeBag)
 
         deleteButton.rx.tap
             .flatMapLatest { [reactions] in
@@ -61,7 +61,7 @@ final class TripDetailController: ScrollControllerBase<Trip, TripDetailRootView>
             .subscribe(onNext: { [reactions] in
                 reactions.close()
             })
-            .addDisposableTo(lifetimeDisposeBag)
+            .disposed(by: lifetimeDisposeBag)
     }
     
     override func update() {
@@ -79,7 +79,7 @@ final class TripDetailController: ScrollControllerBase<Trip, TripDetailRootView>
                 .subscribe(onNext: { [weak self] in
                     self?.componentState = $0
                 })
-                .addDisposableTo(stateDisposeBag)
+                .disposed(by: stateDisposeBag)
         }
     }
 }

@@ -44,14 +44,14 @@ final class LoginController: ControllerBase<Void, LoginRootView> {
 
             switch validatedCredentials {
             case .success(let email, let password):
-                IQKeyboardManager.sharedManager().resignFirstResponder()
+                IQKeyboardManager.shared.resignFirstResponder()
                 let login = dependencies.credentialAuthProvider.login(email: email, password: password)
                     .trackActivity(in: loadingIndicator)
                     .shareReplay(1)
 
                 login.filterError()
                     .subscribe(onNext: reactions.loginSuccessful)
-                    .addDisposableTo(lifetimeDisposeBag)
+                    .disposed(by: lifetimeDisposeBag)
 
                 login.errorOnly()
                     .map { error in
@@ -67,7 +67,7 @@ final class LoginController: ControllerBase<Void, LoginRootView> {
                     .subscribe(onNext: {
                         _ = errorAlert(title: L10n.Auth.Error.loginTitle, subTitle: $0)
                     })
-                    .addDisposableTo(lifetimeDisposeBag)
+                    .disposed(by: lifetimeDisposeBag)
 
             case .failure(let error):
                 let errorMessage: String

@@ -46,7 +46,7 @@ final class CitySelectionController: ControllerBase<String, CitySelectionRootVie
             .subscribe(onNext: { [rootView] _ in
                 rootView.componentState = .empty(message: L10n.City.Search.minimumCharacters(2))
             })
-            .addDisposableTo(lifetimeDisposeBag)
+            .disposed(by: lifetimeDisposeBag)
 
         searchBox.observableState
             .filter { $0.characters.count >= 2 }
@@ -55,7 +55,7 @@ final class CitySelectionController: ControllerBase<String, CitySelectionRootVie
             .flatMapLatest { [dependencies] in dependencies.geoNamesService.searchCities(name: $0) }
             .map { $0.isNotEmpty ? .items($0) : .empty(message: L10n.City.Search.notFound) }
             .subscribe(onNext: rootView.setComponentState)
-            .addDisposableTo(lifetimeDisposeBag)
+            .disposed(by: lifetimeDisposeBag)
     }
 
     override func update() {
@@ -69,7 +69,7 @@ final class CitySelectionController: ControllerBase<String, CitySelectionRootVie
 
         navigationItem.titleView = searchBox
         searchBox.sizeToFit()
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(asset: Asset.back), style: .plain) { [reactions] _ in
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(asset: Asset.back), style: .plain) { [reactions] in
             reactions.close()
         }
     }
@@ -77,7 +77,7 @@ final class CitySelectionController: ControllerBase<String, CitySelectionRootVie
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
 
-        IQKeyboardManager.sharedManager().resignFirstResponder()
+        IQKeyboardManager.shared.resignFirstResponder()
     }
 
     override func act(on action: PlainTableViewAction<CityCell>) {

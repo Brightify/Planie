@@ -24,7 +24,7 @@ class AppDelegate: SuperDelegate, ApplicationLaunched {
         Fabric.with([Crashlytics.self, Answers.self])
         disableAnimationsIfRequested()
         FIRApp.configure()
-        IQKeyboardManager.sharedManager().enable = true
+        IQKeyboardManager.shared.enable = true
 
 //        Configuration.global.set(value: L10n.Common.loading, for: Properties.)
 //        ReactantConfiguration.global.defaultLoadingMessage = L10n.Common.loading

@@ -10,6 +10,7 @@ import Reactant
 
 final class CitySelectionRootView: PlainTableView<CityCell> {
 
+    @objc
     init() {
         super.init(
             cellFactory: CityCell.init,

@@ -46,7 +46,7 @@ final class UserDetailController: ControllerBase<UserProfile, UserDetailRootView
         dependencies.userService.userProfile(userId: shownProfileId)
             .filterError()
             .subscribe(onNext: setComponentState)
-            .addDisposableTo(lifetimeDisposeBag)
+            .disposed(by: lifetimeDisposeBag)
     }
 
     override func update() {
@@ -62,7 +62,7 @@ final class UserDetailController: ControllerBase<UserProfile, UserDetailRootView
             dependencies.userService.setAccountDisabled(user: profile, disabled: !profile.disabled)
                 .trackActivity(in: loadingIndicator)
                 .subscribe()
-                .addDisposableTo(lifetimeDisposeBag)
+                .disposed(by: lifetimeDisposeBag)
 
         case .changeRole:
             reactions.selectRole(profile.role)
@@ -70,7 +70,7 @@ final class UserDetailController: ControllerBase<UserProfile, UserDetailRootView
                     dependencies.userService.setAccountRole(user: profile, role: $0).trackActivity(in: loadingIndicator)
                 }
                 .subscribe()
-                .addDisposableTo(lifetimeDisposeBag)
+                .disposed(by: lifetimeDisposeBag)
         case .manageTrips:
             reactions.openTrips(profile)
         }
